@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src= 
+    "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+            integrity= 
+    "sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script> 
+        <script src= 
+    "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+            integrity= 
+    "sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="toggle-theme">
+        <label>
+            <button class="darkmode" onclick="myFunction()">Darkmode</button>
+        </label>
+    </div>
+    <div class="calculator" id="calcu">
+        <div class="heading"><h1>Calculator</h1></div>
+        <div class="textarea"><input type="text" id="display"></div>
+        <div class="btn">
+            <button class="C" value="C" onclick="clr()">C</button>
+            <button class="deletekey" value="deletekey" onclick="clr()">DEL</button>
+            <button class="sign" value="/" onclick="dis('/')" onkeydown="myFunction(event)">/</button>
+            <button class="sign" value="*" onclick="dis('*')" onkeydown="myFunction(event)">*</button>
+            <button class="number" value="7" onclick="dis('7')" onkeydown="myFunction(event)">7</button>
+            <button class="number" value="8" onclick="dis('8')" onkeydown="myFunction(event)">8</button>
+            <button class="number" value="9" onclick="dis('9')" onkeydown="myFunction(event)">9</button>
+            <button class="sign" value="-" onclick="dis('-')" onkeydown="myFunction(event)">-</button>
+            <button class="number" value="4" onclick="dis('4')" onkeydown="myFunction(event)">4</button>
+            <button class="number" value="5" onclick="dis('5')" onkeydown="myFunction(event)">5</button>
+            <button class="number" value="6" onclick="dis('6')" onkeydown="myFunction(event)">6</button>
+            <button class="sign" value="+" onclick="dis('+')" onkeydown="myFunction(event)">+</button>
+            <button class="number" value="1" onclick="dis('1')" onkeydown="myFunction(event)">1</button>
+            <button class="number" value="2" onclick="dis('2')" onkeydown="myFunction(event)">2</button>
+            <button class="number" value="3" onclick="dis('3')" onkeydown="myFunction(event)">3</button>
+            <!--solve function call  function solve to evaluate value-->
+            <button class="equalsign" onclick="solve()">=</button>
+            <button class="number" value="0" onclick="dis('0')" onkeydown="myFunction(event)">0</button>
+            <button class="sign" value="." onclick="dis('.')" onkeydown="myFunction(event)">.</button>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
